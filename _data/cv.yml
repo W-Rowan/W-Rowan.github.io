@@ -1,97 +1,103 @@
 - title: General Information
   type: map
   contents:
-    - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
-    - name: Languages
-      value: English, German
+    - name: Name
+      value: Will Rowan
+    - name: Status
+      value: Looking for postdoc positions in academia and industry. Starting October 2024.
+    - name: Possible locations
+      value: United Kingdom, Switzerland, Germany, remote.
+    # - name: Languages
+    #   value: English
+
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: PhD Computer Science
+      institution: University of York, York, UK
+      year: 2020-Present
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
+        - <strong>Field:</strong> Computer Vision, Machine Learning, Statistical Shape Modelling.
+        - <strong>Advisors:</strong> Prof. Nick Pears, Prof. Andrew Keeling, and Dr. Patrik Huber.
+
+    - title: MSc Advanced Computer Science
+      institution: University of York, York, UK
+      year: 2019 - 2020
       description:
-        - Description 1.
-        - Description 2.
+        - <strong>Thesis:</strong>  The Effect of Temporal Dependency on Deepfake Detection
+        - <strong>Advisor:</strong> Prof. Nick Pears.
+
+    - title: BEng Computer Science
+      institution: University of York, York, UK
+      year: 2016 - 2019
+      description:
+        - <strong>Thesis:</strong> Deep Learning for Gaze Estimation
+        - <strong>Advisor:</strong>  Prof. Nick Pears.
+
+
+
+- title: Honours and Awards
+  type: time_table
+  contents:
+    - year: 2023
+      items:
+        - <strong>Best Presentation Award, Runner-Up:</strong> ReproduceCVPR Workshop, FAU, Germany
+        - <strong>Best Project Award, Runner-Up:</strong> ReproduceCVPR Workshop, FAU, Germany
+        - <strong>Basecamp Artistic Residency Selection (200 globally):</strong> Locarno Film Festival, Switzerland
+        - <strong>Far East Film Festival Campus Selection (10 out of Europe & Asia):</strong>
+    - year: 2020
+      items:
+        - <strong>Engineering and Physical Sciences Research Council Doctoral Scholarship</strong>
+        - <strong>Writer of the Year (1 out of 20,000):</strong> University of York
+    - year: 2019
+      items:
+        - <strong>Highest-marked dissertation (1 out of 150):</strong> University of York
+    - year: 2016
+      items:
+        - <strong>IBM Entrance Scholarship (3 out of 150):</strong> University of York
 
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: PhD Researcher
+      institution: University of York, York, UK
+      year: 2020 - Present
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
+        - Shape-consistent text-guided image generation from generative 3D head models.
+        - Shared latent space for text, images, and 3D parameterised heads.
+        - Parts-based shape completion of the human head.
+
+    - title: Master’s Researcher
+      institution: University of York, York, UK
+      year: 2020
       description:
-        - Description 1.
-        - Description 2.
+        - Classification of deepfake detection systems.
+        - Quantifying sources of bias in image-based generative methods.
 
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
+    - title: Undergraduate Researcher
+      institution: University of York, York, UK
+      year: 2018 - 2019
       description:
+        - Deep learning solutions for real-time unconstrained gaze estimation.
 
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
 
-- title: Open Source Projects
-  type: time_table
-  contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
-
-- title: Honors and Awards
-  type: time_table
-  contents:
-    - year: 1921
-      items: 
-        - Nobel Prize in Physics 
-        - Matteucci Medal
-    - year: 2029
-      items: 
-        - Max Planck Medal
-
-- title: Academic Interests
+- title: Skills & Interests
   type: nested_list
   contents:
-    - title: Topic 1.
-      items: 
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+    - title: Deep Learning
       items:
-        - Description 1.
-        - Description 2.
-
-- title: Other Interests
-  type: list
-  contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+        - PyTorch, PyTorch 3D, Keras, Transformers, Diffusers
+    - title: Computer Vision
+      items:
+        - Skimage, OpenCV
+    - title: Data Science
+      items:
+        - NumPy, Pandas, SciPy, sklearn, seaborn
+    - title: Software
+      items:
+        - Git, Python, MATLAB, LaTeX, COLMAP, MeshLab
+    - title: Other Interests
+      items:
+        - Freelance film journalism (<i>BBC Radio York, Filmhounds Magazine, Taiwan News</i>)
+        - Ex-editor of <i>The Lemon Press</i> (UK’s largest volunteer-run satire magazine)
