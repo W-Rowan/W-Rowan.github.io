@@ -4,9 +4,9 @@
     - name: Name
       value: Will Rowan
     - name: Status
-      value: Looking for postdoc positions in academia and industry. Starting October 2024.
-    - name: Possible locations
-      value: United Kingdom, Switzerland, Germany, remote.
+      value: Working on the future of virtual production
+    - name: Location
+      value: York, United Kingdom
     # - name: Languages
     #   value: English
 
@@ -16,7 +16,7 @@
   contents:
     - title: PhD Computer Science
       institution: University of York, York, UK
-      year: 2020-Present
+      year: 2020-2024
       description:
         - <strong>Field:</strong> Computer Vision, Machine Learning, Statistical Shape Modelling.
         - <strong>Advisors:</strong> Prof. Nick Pears, Prof. Andrew Keeling, and Dr. Patrik Huber.
