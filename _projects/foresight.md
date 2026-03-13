@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Foresight
-description: "AI research intelligence platform. Interactive timeline graphs of academic papers, AI-predicted future research directions, and live code execution via Claude agents. 2nd place, UCL AI Festival Hackathon 2026."
+description: "AI research intelligence platform. Visualises academic papers on an interactive timeline, predicts future research directions, and lets you implement them with live AI agents. 2nd place, UCL AI Festival Hackathon 2026. Built with Simon Luo."
 img: assets/img/foresight_logo.png
 importance: 5
 category: tech
