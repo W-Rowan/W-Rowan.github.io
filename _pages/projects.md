@@ -2,8 +2,35 @@
 layout: page
 title: projects
 permalink: /projects/
-description: Things I've built -- startups, platforms, creative works, and civic tech.
+description: Things I have built, from startups and platforms to creative works and civic tech.
 nav: true
 nav_order: 3
 horizontal: false
 ---
+
+<!-- Generate cards for each project -->
+{% if site.enable_project_categories and page.display_categories %}
+  <!-- Display categorized projects -->
+  {% for category in page.display_categories %}
+  <a id="{{ category }}" href=".#{{ category }}">
+    <h2 class="category">{{ category }}</h2>
+  </a>
+  {% assign categorized_projects = site.projects | where: "category", category %}
+  {% assign sorted_projects = categorized_projects | sort: "importance" %}
+  <!-- Generate cards for each project -->
+  <div class="grid">
+    {% for project in sorted_projects %}
+      {% include projects.html %}
+    {% endfor %}
+  </div>
+  {% endfor %}
+{% else %}
+  <!-- Display projects without categories -->
+  {% assign sorted_projects = site.projects | sort: "importance" %}
+  <!-- Generate cards for each project -->
+  <div class="grid">
+    {% for project in sorted_projects %}
+      {% include projects.html %}
+    {% endfor %}
+  </div>
+{% endif %}
