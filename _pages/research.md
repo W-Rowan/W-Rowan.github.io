@@ -7,9 +7,9 @@ nav: true
 nav_order: 1
 ---
 
-My current research focuses on utilising and adapting video foundation models and world models for the creative industries. I work on making these powerful systems practical for filmmakers: real-time scene relighting, environment integration, and compositing tools that fit into existing production workflows.
+My current research focuses on utilising and adapting video foundation models and world models for the creative industries. At [PXLD](https://pxld.ai), the University of York spinout I co-founded, I work on making these powerful systems practical for filmmakers: automating VFX post-production pipelines, real-time scene relighting, and compositing tools that fit into existing production workflows. The goal is to democratise Hollywood-grade tools for productions of any budget.
 
-I am a Research Fellow in the Department of Computer Science at the University of York, working on a **£1.8M Innovate UK project** with [dock10](https://www.dock10.co.uk) (the UK's largest television studio facility, based at MediaCityUK) and 2LE Media. I also secured a **£20,000 grant** from the AI SuperConnector startup accelerator at Imperial College London, and organised the workshop *"Capturing Reality and Changing It"* at the 2024 Locarno Film Festival.
+Previously, I was a Research Fellow at the University of York on a **£1.8M Innovate UK project** with [dock10](https://www.dock10.co.uk) (the UK's largest television studio facility, based at MediaCityUK) and 2LE Media, developing AI-powered 3D reconstruction for real-time virtual production (2024–2025). I also secured a **£20,000 grant** from the AI SuperConnector startup accelerator at Imperial College London, and organised the workshop *"Capturing Reality and Changing It"* at the 2024 Locarno Film Festival.
 
 ## PhD Research
 
