@@ -40,7 +40,7 @@
   contents:
     - title: Co-founder & CEO
       institution: PXLD (University of York spinout)
-      year: 2024–present
+      year: 2025–present
       description:
         - "AI-powered virtual production startup. Featured in Variety and Screen Daily."
         - "Selected for Zinemaldia Startup Challenge (San Sebastián) and European Film Market Startup Programme (Berlinale)."
@@ -65,11 +65,11 @@
 - title: Publications
   type: list
   contents:
-    - "<strong>N Heads Are Better Than One</strong> — ECCV Workshop on Foundation Models for 3D Humans (2024). <strong>Best Poster Award.</strong>"
-    - "<strong>How Many OptiFaces?</strong> — ICLR (2024)"
-    - "<strong>Text2Face: 3D Morphable Faces from Text</strong> — ICLR (2023)"
-    - "<strong>San Vitale Challenge</strong> — ECCV Workshop on AI for Digital Humanities (2024)"
-    - "<strong>Temporal Dependency in Deepfake Detection</strong> — arXiv (2022)"
+    - "<strong>N Heads Are Better Than One</strong>, ECCV Workshop on Foundation Models for 3D Humans (2024). <strong>Best Poster Award.</strong>"
+    - "<strong>How Many OptiFaces?</strong>, ICLR (2024)"
+    - "<strong>Text2Face: 3D Morphable Faces from Text</strong>, ICLR (2023)"
+    - "<strong>San Vitale Challenge</strong>, ECCV Workshop on AI for Digital Humanities (2024)"
+    - "<strong>Temporal Dependency in Deepfake Detection</strong>, arXiv (2022)"
 
 - title: Awards & Honours
   type: time_table
@@ -79,12 +79,12 @@
         - "<strong>Best Presentation</strong>, International Computer Vision Summer School (ICVSS), Sicily"
         - "<strong>Berlinale Talents</strong> (1 of 200 worldwide), Berlin International Film Festival"
         - "<strong>Berlinale Talents Press</strong> (1 of 8 film critics worldwide)"
-        - "<strong>REAL Academy</strong>, Locarno Film Festival — filmmaker lab"
-        - "<strong>European Forum Alpbach</strong> — scholarship recipient"
+        - "<strong>REAL Academy</strong>, Locarno Film Festival, filmmaker lab"
+        - "<strong>European Forum Alpbach</strong>, scholarship recipient"
     - year: 2024
       items:
         - "<strong>Best Poster</strong>, Foundation Models for 3D Humans Workshop, ECCV, Milan"
-        - "<strong>GoCritic!</strong> — European criticism programme; wrote for Cineuropa"
+        - "<strong>GoCritic!</strong>, European criticism programme; wrote for Cineuropa"
     - year: 2023
       items:
         - "<strong>Best Presentation Runner-Up</strong>, Reproducibility in Computer Vision, CVPR"
@@ -112,7 +112,7 @@
         - "Radu Jude, Kai Ko, Tommy Wiseau, Johnnie To, Gabby Wong"
     - title: Filmmaking
       items:
-        - "<em>Film Fever</em> (2025) — 9-min experimental documentary, REAL Academy, Locarno Film Festival"
+        - "<em>Film Fever</em> (2025), 9-min experimental documentary, REAL Academy, Locarno Film Festival"
     - title: Cinema Programming
       items:
         - "York Student Cinema (2017–2023). Head Film Programmer 2021–2022: ~100 films/year, 300-seat venue, £12,000 budget"
@@ -120,7 +120,7 @@
 - title: Academic Service
   type: list
   contents:
-    - "<strong>Socials Chair</strong>, Conference on Visual Media Production (CVMP) — organising committee"
+    - "<strong>Socials Chair</strong>, Conference on Visual Media Production (CVMP), organising committee"
     - "<strong>Symposium Chair</strong>, BMVA Symposium on 3D Computer Vision, February 2025"
 
 - title: Projects & Ventures
@@ -172,5 +172,5 @@
   contents:
     - "Board Member, Club Alpbach London"
     - "Advisor, SpeakEU"
-    - "Editor, York Vision (2021–2022) — 30 staff, five 32-page print editions/year"
-    - "Editor/President, The Lemon Press — UK's largest volunteer-run satire magazine"
+    - "Editor, York Vision (2021–2022). 30 staff, five 32-page print editions/year."
+    - "Editor/President, The Lemon Press. UK's largest volunteer-run satire magazine."
