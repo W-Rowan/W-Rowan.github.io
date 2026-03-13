@@ -42,14 +42,14 @@
       institution: PXLD (University of York spinout)
       year: 2025–present
       description:
-        - "AI-powered virtual production startup. Featured in Variety and Screen Daily."
+        - "Building the next generation of filmmaking tools. Featured in Variety and Screen Daily."
         - "Selected for Zinemaldia Startup Challenge (San Sebastián) and European Film Market Startup Programme (Berlinale)."
     - title: Research Fellow, Computer Science
       institution: University of York
       year: 2025–2026
       description:
         - "£1.8M Innovate UK project with dock10 (UK's largest TV facility) and 2LE Media."
-        - "Developing AI-powered 3D reconstruction for real-time virtual production compositing."
+        - "Developing 3D reconstruction techniques for real-time virtual production compositing."
         - "Secured £20,000 grant from AI SuperConnector (Imperial College London)."
     - title: Research Fellow, Arts & Creative Technologies
       institution: University of York
@@ -128,7 +128,7 @@
   contents:
     - title: PXLD
       items:
-        - "Co-founder & CEO. AI-powered virtual production. pxld.ai"
+        - "Co-founder & CEO. Next-generation filmmaking tools. pxld.ai"
     - title: opencall.fyi
       items:
         - "Founder. Curated opportunities for emerging artists."
