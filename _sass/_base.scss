@@ -4,6 +4,10 @@
 
 // Typography
 
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
 p,
 h1,
 h2,
@@ -808,6 +812,7 @@ pre {
   background-color: var(--global-code-bg-color);
   border-radius: 6px;
   padding: 6px 12px;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
 
   pre,
   code {
@@ -823,6 +828,7 @@ code {
   background-color: var(--global-code-bg-color);
   border-radius: 3px;
   padding: 3px 3px;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
 }
 
 
