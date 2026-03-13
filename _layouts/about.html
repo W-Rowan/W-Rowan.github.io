@@ -45,6 +45,11 @@ layout: default
             {{ content }}
           </div>
 
+          <!-- Achievement Ticker -->
+          {% if page.ticker -%}
+            {%- include ticker.html %}
+          {%- endif %}
+
           <!-- News -->
           {% if page.news and site.announcements.enabled -%}
             <h2><a href="{{ '/news/' | relative_url }}" style="color: inherit;">news</a></h2>
