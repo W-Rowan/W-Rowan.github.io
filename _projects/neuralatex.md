@@ -5,4 +5,5 @@ description: "The world's first machine learning library written entirely in LaT
 img: assets/img/neuralatex_code.png
 importance: 2
 category: research
+redirect: https://neuralatex.com
 ---

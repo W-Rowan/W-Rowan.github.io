@@ -2,20 +2,18 @@
 layout: page
 title: research
 permalink: /research/
-description: Computer vision, 3D face reconstruction, generative AI, and virtual production.
+description: Video foundation models, virtual production, 3D face reconstruction, and generative AI.
 nav: true
 nav_order: 1
 ---
 
-My research focuses on building intelligent systems for the human face: methods that can take any input (text, a photo, a partial 3D scan) and produce an accurate, editable 3D model. I call this the Intelligent Face Agent.
+My current research focuses on utilising and adapting video foundation models and world models for the creative industries. I work on making these powerful systems practical for filmmakers: real-time scene relighting, environment integration, and compositing tools that fit into existing production workflows.
 
-My PhD thesis, *"Towards an Intelligent Agent for the Human Face"*, introduced new approaches to 3D face reconstruction, text-driven face generation, and evaluation metrics for the field. I was supervised by [Dr Patrik Huber](https://www.patrikhuber.ch), [Prof Nick Pears](https://www.cs.york.ac.uk/people/?group=Academic%20and%20Teaching%20Staff&username=nep), and [Prof Andrew Keeling](https://medicinehealth.leeds.ac.uk/dentistry/staff/492/professor-andrew-keeling) at the University of York.
+I am a Research Fellow in the Department of Computer Science at the University of York, working on a **£1.8M Innovate UK project** with [dock10](https://www.dock10.co.uk) (the UK's largest television studio facility, based at MediaCityUK) and 2LE Media. I also secured a **£20,000 grant** from the AI SuperConnector startup accelerator at Imperial College London, and organised the workshop *"Capturing Reality and Changing It"* at the 2024 Locarno Film Festival.
 
-## Current Work
+## PhD Research
 
-I am a Research Fellow in the Department of Computer Science at the University of York, working on a **£1.8M Innovate UK project** with [dock10](https://www.dock10.co.uk) (the UK's largest television studio facility, based at MediaCityUK) and 2LE Media. We are developing AI-powered 3D reconstruction techniques for real-time virtual production compositing, allowing actors to be seamlessly placed into virtual environments during live broadcast.
-
-I also secured a **£20,000 grant** from the AI SuperConnector startup accelerator at Imperial College London, and pitched and organised the workshop *"Capturing Reality and Changing It"* at the 2024 Locarno Film Festival.
+My PhD thesis, *"Towards an Intelligent Agent for the Human Face"*, focused on building intelligent systems for the human face: methods that take any input (text, a photo, a partial 3D scan) and produce an accurate, editable 3D model. This included new approaches to 3D face reconstruction, text-driven face generation (Text2Face, the first method of its kind), and evaluation metrics for the field. I was supervised by [Dr Patrik Huber](https://www.patrikhuber.ch), [Prof Nick Pears](https://www.cs.york.ac.uk/people/?group=Academic%20and%20Teaching%20Staff&username=nep), and [Prof Andrew Keeling](https://medicinehealth.leeds.ac.uk/dentistry/staff/492/professor-andrew-keeling) at the University of York.
 
 ## Publications
 
