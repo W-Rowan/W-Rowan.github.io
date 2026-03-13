@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="10.160975mm"
+   height="9.2209244mm"
+   viewBox="0 0 10.160975 9.2209244"
+   version="1.1"
+   id="svg1"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-47.973024,-128.42814)">
+    <path
+       style="font-size:8.46667px;font-family:'Pixelify Sans';-inkscape-font-specification:'Pixelify Sans';stroke:#000000;stroke-width:0.265"
+       d="m 48.105524,133.96239 v -4.63127 h 0.770467 v -0.77047 h 2.387601 v 0.77047 h 0.778934 v 2.37913 h -0.778934 v 0.762 h -2.302934 v 1.49014 z m 0.855134,-2.3368 h 2.218267 v -2.21827 h -2.218267 z"
+       id="text1"
+       aria-label="p" />
+    <path
+       style="font-size:8.46667px;font-family:'Pixelify Sans';-inkscape-font-specification:'Pixelify Sans';stroke:#000000;stroke-width:0.265"
+       d="m 51.6325,137.51657 v -5.44407 h 0.855134 v 5.44407 z"
+       id="text3"
+       aria-label="l" />
+    <path
+       style="font-size:8.46667px;font-family:'Pixelify Sans';-inkscape-font-specification:'Pixelify Sans';stroke:#000000;stroke-width:0.265"
+       d="m 52.859687,133.21732 v -0.84666 h 0.770467 v -0.77047 h 0.762 v -0.6858 h -0.762 v -0.762 h -0.770467 v -0.84667 h 0.855133 v 0.77047 h 0.762001 v 0.75353 h 0.694266 v -0.75353 h 0.762001 v -0.77047 h 0.8636 v 0.84667 h -0.778934 v 0.762 h -0.762 v 0.6858 h 0.762 v 0.77047 h 0.778934 v 0.84666 h -0.8636 v -0.762 h -0.762001 v -0.77046 h -0.694266 v 0.77046 H 53.71482 v 0.762 z"
+       id="text4"
+       aria-label="x" />
+    <path
+       style="font-size:8.46667px;font-family:'Pixelify Sans';-inkscape-font-specification:'Pixelify Sans';stroke:#000000;stroke-width:0.265"
+       d="m 54.834967,137.47657 v -0.762 H 54.0645 v -2.37914 h 0.770467 v -0.77047 h 2.3114 v -1.53246 h 0.855134 v 4.68207 h -0.778934 v 0.762 z m 0.08467,-0.84667 h 2.218268 v -2.21827 h -2.218268 z"
+       id="text5"
+       aria-label="d" />
+  </g>
+</svg>
