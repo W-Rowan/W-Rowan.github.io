@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Context & Positioning Pass</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', -apple-system, sans-serif; background: #f5f5f5; color: #1a1a1a; line-height: 1.6; }
+
+  .header {
+    background: #111;
+    color: #fff;
+    padding: 40px 40px 32px;
+    text-align: center;
+  }
+  .header h1 { font-size: 24px; font-weight: 300; }
+  .header p { color: #888; font-size: 14px; margin-top: 6px; }
+
+  .section {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 36px 24px;
+  }
+  .section + .section { border-top: 1px solid #e0e0e0; }
+  .section h2 {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #888;
+    margin-bottom: 20px;
+  }
+
+  .compare {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  .before, .after {
+    padding: 16px 20px;
+    border-radius: 10px;
+    font-size: 14px;
+  }
+  .before {
+    background: #fff0f0;
+    border: 1px solid #fecaca;
+  }
+  .before .label {
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #dc2626;
+    margin-bottom: 8px;
+  }
+  .after {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+  }
+  .after .label {
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #16a34a;
+    margin-bottom: 8px;
+  }
+  .reason {
+    font-size: 12px;
+    color: #666;
+    font-style: italic;
+    margin-top: 6px;
+    padding-top: 6px;
+    border-top: 1px solid rgba(0,0,0,0.05);
+  }
+
+  .ticker-demo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 16px 0;
+  }
+  .ticker-item {
+    padding: 6px 14px;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    font-size: 13px;
+    color: #333;
+  }
+
+  .page-section {
+    background: #fff;
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+  }
+  .page-section h3 {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  .page-section h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 16px 0 8px;
+    color: #333;
+  }
+  .page-section p, .page-section li {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.7;
+  }
+  .page-section ul { padding-left: 20px; }
+  .page-section li { margin-bottom: 6px; }
+
+  .note {
+    background: #fffbeb;
+    border-left: 3px solid #f59e0b;
+    padding: 10px 14px;
+    font-size: 13px;
+    color: #92400e;
+    border-radius: 0 8px 8px 0;
+    margin: 12px 0;
+  }
+
+  .audience-tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-right: 4px;
+  }
+  .audience-tag.academic { background: #ede9fe; color: #5b21b6; }
+  .audience-tag.film { background: #fef3c7; color: #92400e; }
+  .audience-tag.general { background: #e0f2fe; color: #075985; }
+  .audience-tag.tech { background: #f0fdf4; color: #166534; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Contextualisation & Positioning Pass</h1>
+  <p>Making every item land for every audience — academic, film, general</p>
+</div>
+
+<!-- ROTATING HIGHLIGHTS -->
+<div class="section">
+  <h2>1. Rotating Highlights (Hero Ticker)</h2>
+  <p style="font-size: 14px; color: #555; margin-bottom: 16px;">These scroll past in ~2 seconds each. They must be instantly impressive without explanation. Rule: <strong>if it needs a footnote, rewrite it.</strong></p>
+
+  <div class="compare">
+    <div class="before">
+      <div class="label">Before</div>
+      GoCritic! → Cineuropa
+      <div class="reason">Means nothing outside niche film criticism circles</div>
+    </div>
+    <div class="after">
+      <div class="label">After</div>
+      Published in Cineuropa
+      <div class="reason">Cineuropa is a recognisable European film publication. The route there (GoCritic!) belongs on the Film page with full context.</div>
+    </div>
+  </div>
+
+  <div class="compare">
+    <div class="before">
+      <div class="label">Before</div>
+      Best Presentation, ICVSS 2025
+      <div class="reason">ICVSS is unknown outside computer vision</div>
+    </div>
+    <div class="after">
+      <div class="label">After</div>
+      Best Presentation — Int'l Computer Vision Summer School
+      <div class="reason">Spells out what it is. Academics recognise it; others understand "best presentation at international school."</div>
+    </div>
+  </div>
+
+  <div class="compare">
+    <div class="before">
+      <div class="label">Before</div>
+      PXLD at EFM Startups
+      <div class="reason">EFM is insider shorthand</div>
+    </div>
+    <div class="after">
+      <div class="label">After</div>
+      PXLD selected for Berlinale startup programme
+      <div class="reason">Everyone knows Berlinale. "Startup programme" is self-explanatory.</div>
+    </div>
+  </div>
+
+  <div class="compare">
+    <div class="before">
+      <div class="label">Before</div>
+      Berlinale Talents Press (1 of 8)
+      <div class="reason">Redundant with the Berlinale Talents item — and "Press" sub-programme is confusing</div>
+    </div>
+    <div class="after">
+      <div class="label">After</div>
+      1 of 8 critics worldwide — Berlinale Talents Press
+      <div class="reason">Lead with the stat. "1 of 8 worldwide" stops anyone scrolling. Then the programme name.</div>
+    </div>
+  </div>
+
+  <div class="compare">
+    <div class="before">
+      <div class="label">Before</div>
+      Best Poster, ECCV 2024
+      <div class="reason">ECCV is well-known in CV but not outside it</div>
+    </div>
+    <div class="after">
+      <div class="label">After</div>
+      Best Poster — ECCV 2024 (European Conference on Computer Vision)
+      <div class="reason">Spell it out once for non-academic audiences. Parenthetical keeps it clean.</div>
+    </div>
+  </div>
+
+  <p style="font-size: 14px; font-weight: 600; margin: 20px 0 12px;">Revised ticker items:</p>
+  <div class="ticker-demo">
+    <span class="ticker-item">Best Presentation — Int'l Computer Vision Summer School</span>
+    <span class="ticker-item">Best Poster — ECCV 2024</span>
+    <span class="ticker-item">Berlinale Talents 2025 — 1 of 200 worldwide</span>
+    <span class="ticker-item">1 of 8 critics worldwide — Berlinale Talents Press</span>
+    <span class="ticker-item">Featured in Variety</span>
+    <span class="ticker-item">Featured in Screen Daily</span>
+    <span class="ticker-item">Published in Cineuropa</span>
+    <span class="ticker-item">PXLD selected for Berlinale startup programme</span>
+    <span class="ticker-item">CEO, PXLD — AI virtual production startup</span>
+  </div>
+  <div class="note">Each item now works for all three audiences: an academic, a film programmer, and someone's mum. The detailed context lives on the relevant pages.</div>
+</div>
+
+<!-- RESEARCH PAGE -->
+<div class="section">
+  <h2>2. Research Page — Positioning for Academics + General</h2>
+
+  <div class="page-section">
+    <h3>Research</h3>
+    <p>This is the academic core. Academics are the primary audience here, but it should also be readable by film industry people who want to understand Will's technical credibility.</p>
+
+    <h4>Opening paragraph</h4>
+    <p><span class="audience-tag academic">Academic</span><span class="audience-tag general">General</span></p>
+    <p>Brief, jargon-light summary of research focus: 3D face reconstruction, generative AI, virtual production. Mention the Intelligent Face Agent concept in plain language. Name the supervisors (important for academic credibility).</p>
+
+    <h4>Publications</h4>
+    <p><span class="audience-tag academic">Academic</span></p>
+    <p>Standard academic format: paper title, authors, venue, year, links. Use al-folio's built-in BibTeX engine with preview images. 4 papers: Text2Face (ICLR 2023), OptiFaces (ICLR 2024), ECCV 2024 workshop, deepfake detection.</p>
+
+    <h4>Awards & Recognition</h4>
+    <p><span class="audience-tag academic">Academic</span><span class="audience-tag general">General</span></p>
+    <ul>
+      <li><strong>Best Presentation</strong>, International Computer Vision Summer School (ICVSS), Sicily, 2025</li>
+      <li><strong>Best Poster</strong>, Foundation Models for 3D Humans Workshop, ECCV, Milan, 2024</li>
+      <li><strong>Best Presentation Runner-Up</strong>, Reproducibility in Computer Vision Workshop, CVPR, 2023</li>
+      <li><strong>EPSRC Doctoral Scholarship</strong>, 2020–2024</li>
+      <li><strong>Highest MSc grade on record</strong>, Advanced Computer Science, University of York (84%, Distinction)</li>
+      <li><strong>Best Dissertation in Cohort</strong> (1 of 150), BEng Computer Science, 2019</li>
+    </ul>
+    <div class="note">Each award includes the full name, location, and year. No unexplained acronyms. The reader immediately understands the prestige.</div>
+
+    <h4>Current Work</h4>
+    <p><span class="audience-tag academic">Academic</span><span class="audience-tag film">Film</span></p>
+    <p>Research Fellow, University of York. Part of a £1.8M Innovate UK project with dock10 (the UK's largest television studio facility, based at MediaCityUK). Developing AI-powered 3D reconstruction for real-time virtual production compositing.</p>
+    <p style="margin-top: 8px;"><em>This is where the dual identity shines — a film person reading this thinks "oh, they work with real studios." An academic thinks "applied research with significant funding."</em></p>
+
+    <h4>Academic Service</h4>
+    <p><span class="audience-tag academic">Academic</span></p>
+    <ul>
+      <li><strong>Socials Chair</strong>, Conference on Visual Media Production (CVMP) — organising committee</li>
+      <li><strong>Symposium Chair</strong>, British Machine Vision Association (BMVA) Symposium on 3D Computer Vision, February 2025</li>
+      <li><strong>Graduate Teaching Assistant</strong>, Multi-Agent Interaction, University of York, 2020–2021</li>
+      <li><strong>Dissertation Supervisor</strong>, Undergraduate projects, 2021–2022</li>
+    </ul>
+  </div>
+</div>
+
+<!-- FILM PAGE -->
+<div class="section">
+  <h2>3. Film Page — Positioning for Film Industry + General</h2>
+
+  <div class="page-section">
+    <h3>Film</h3>
+    <p>This page tells the story of someone deeply embedded in film culture — not a hobbyist. The competitive selection stats are the headline credentials.</p>
+
+    <h4>Festival Selections & Programmes</h4>
+    <p><span class="audience-tag film">Film</span><span class="audience-tag general">General</span></p>
+    <p>Presented with full context so anyone understands the selectivity:</p>
+    <ul>
+      <li><strong>Berlinale Talents 2025</strong> — selected as 1 of 200 emerging filmmakers from thousands of applicants worldwide, at the Berlin International Film Festival</li>
+      <li><strong>Berlinale Talents Press 2025</strong> — simultaneously selected as 1 of 8 film critics worldwide for the dedicated press programme</li>
+      <li><strong>REAL Academy, Locarno Film Festival 2025</strong> — selected for the festival's filmmaker lab; directed <em>Film Fever</em>, a 9-minute experimental documentary</li>
+      <li><strong>GoCritic! 2024–2025</strong> — selected for the European film criticism programme at Anifilm (Liberec, Czech Republic); wrote three articles for <strong>Cineuropa</strong>, Europe's leading film industry publication</li>
+      <li><strong>Far East Film Festival Campus, Udine 2023</strong> — selected as 1 of 10 young critics from Europe and Asia</li>
+      <li><strong>Locarno Basecamp 2023</strong> — selected as 1 of 200 for the Locarno Film Festival's artistic residency</li>
+      <li><strong>European Forum Alpbach 2025</strong> — scholarship recipient</li>
+    </ul>
+    <div class="note">Every selection now tells you: what it is, how selective it was, and what Will did there. "GoCritic!" is no longer floating in space — it's "the European criticism programme where I wrote for Cineuropa."</div>
+
+    <h4>Published Criticism</h4>
+    <p><span class="audience-tag film">Film</span><span class="audience-tag general">General</span></p>
+    <ul>
+      <li><strong>Cineuropa</strong> — 3 articles (Anifilm awards report, reviews of <em>Savages</em> and <em>Hurikan</em>)</li>
+      <li><strong>Filmhounds Magazine</strong> — interview with Radu Jude (Romanian New Wave director, Golden Bear winner); Blu-ray review</li>
+      <li><strong>Taiwan News</strong> — interview with Kai Ko on <em>Bad Education</em></li>
+      <li><strong>Eastern Kicks</strong> — coverage from Far East Film Festival</li>
+      <li><strong>BBC Radio York</strong> — regular guest on the Film Hour</li>
+      <li><strong>Yorkshire Evening Post</strong>, <strong>Movie Marker</strong>, <strong>East Euro Flicks</strong></li>
+    </ul>
+    <p style="margin-top: 8px;"><em>Key interviews contextualised: "Radu Jude" alone means nothing to non-cinephiles. "Romanian New Wave director, Golden Bear winner" signals prestige instantly.</em></p>
+
+    <h4>Filmmaking</h4>
+    <p><span class="audience-tag film">Film</span></p>
+    <p><strong><em>Film Fever</em></strong> (2025) — 9-minute experimental documentary short. Made during the REAL Academy at the Locarno Film Festival. An impressionistic portrait of heat, exhaustion, and dreams at a film festival, using cross-dissolves and non-linear structure. Directorial debut.</p>
+    <p style="margin-top: 8px;"><em>Include 2-3 Film Fever stills from the assets folder. These are visually striking and immediately signal "this person makes things."</em></p>
+
+    <h4>Cinema Programming</h4>
+    <p><span class="audience-tag film">Film</span><span class="audience-tag general">General</span></p>
+    <p><strong>York Student Cinema</strong> (2017–2023, seven years). Head Film Programmer 2021–2022: curated nearly 100 films per year for a 300-seat venue with a £12,000 annual budget. Liaison with distributors, DCP management, event programming (Rocky Horror, The Room midnight screenings).</p>
+    <p style="margin-top: 8px;"><em>The numbers do the work: seven years, 100 films/year, 300 seats, £12K budget. Anyone reading this thinks "that's a real job."</em></p>
+  </div>
+</div>
+
+<!-- PROJECTS PAGE -->
+<div class="section">
+  <h2>4. Projects Page — Positioning for Everyone</h2>
+
+  <div class="page-section">
+    <h3>Project descriptions — contextualised</h3>
+
+    <h4>PXLD <span class="audience-tag tech">Tech</span><span class="audience-tag film">Film</span></h4>
+    <p><strong>Co-founder & CEO.</strong> University of York spinout building AI-powered virtual production tools that make Hollywood-grade VFX accessible to productions of any budget. Featured in <strong>Variety</strong> (San Sebastián International Film Festival, 2025) and <strong>Screen Daily</strong> (European Film Market at the Berlinale, 2026). Selected for the Zinemaldia Startup Challenge and the European Film Market Startup Programme.</p>
+
+    <h4>Before Sunrise Tracker <span class="audience-tag film">Film</span><span class="audience-tag tech">Tech</span></h4>
+    <p>An interactive web experience that maps the real-time journey of Céline and Jesse through Vienna in Richard Linklater's <em>Before Sunrise</em> (1995), synchronised to actual Vienna time. When the characters visit Café Sperl at 11pm in the film, you can follow along at 11pm in real life.</p>
+
+    <h4>opencall.fyi <span class="audience-tag film">Film</span><span class="audience-tag general">General</span></h4>
+    <p><strong>Founder.</strong> A curated platform helping emerging artists discover residencies, fellowships, grants, and competitions across film, visual arts, and criticism. Built from the belief that the right opportunity shouldn't depend on your postcode.</p>
+
+    <h4>Swingometer <span class="audience-tag tech">Tech</span><span class="audience-tag general">General</span></h4>
+    <p>The UK's first fully automated election forecast platform. Aggregates polling data and runs Monte Carlo simulations to predict seat-by-seat outcomes.</p>
+
+    <h4>Foresight <span class="audience-tag tech">Tech</span><span class="audience-tag academic">Academic</span></h4>
+    <p>AI research intelligence platform with interactive timeline visualisation. Built at the UCL AI Festival Hackathon 2026, where it won <strong>2nd place</strong>.</p>
+
+    <h4>SpeakEU <span class="audience-tag tech">Tech</span><span class="audience-tag general">General</span></h4>
+    <p><strong>Technical Lead & Advisor.</strong> A Gen-AI civic assistant that helps EU citizens turn complaints into democratic action. Selected as 1 of 4 projects for the <strong>Alpbach IDEAS programme</strong> (European Forum Alpbach, 2025–2026), mentored by Prof. Alberto Alemanno (HEC Paris, founder of The Good Lobby).</p>
+
+    <h4>Club Alpbach London <span class="audience-tag general">General</span></h4>
+    <p><strong>Scholarships Coordinator.</strong> The UK chapter of the European Forum Alpbach, connecting young people aged 18–30 with fully-funded scholarships to the annual interdisciplinary forum in the Austrian Alps. Built the chapter website at <strong>clubalpbachlondon.com</strong>.</p>
+  </div>
+</div>
+
+<!-- SUMMARY -->
+<div class="section" style="text-align: center; padding: 48px 24px;">
+  <h2>Positioning Principles Applied</h2>
+  <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; text-align: left; max-width: 720px; margin: 0 auto;">
+    <div style="background: #fff; padding: 16px; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.06);">
+      <p style="font-size: 13px; font-weight: 600; margin-bottom: 6px;">No unexplained acronyms</p>
+      <p style="font-size: 12px; color: #888;">ICVSS, ECCV, FEFF, EFM, CVMP — all spelled out or contextualised on first use</p>
+    </div>
+    <div style="background: #fff; padding: 16px; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.06);">
+      <p style="font-size: 13px; font-weight: 600; margin-bottom: 6px;">Stats lead, names follow</p>
+      <p style="font-size: 12px; color: #888;">"1 of 8 critics worldwide" before "Berlinale Talents Press." The number is the hook.</p>
+    </div>
+    <div style="background: #fff; padding: 16px; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.06);">
+      <p style="font-size: 13px; font-weight: 600; margin-bottom: 6px;">Context for non-insiders</p>
+      <p style="font-size: 12px; color: #888;">"Radu Jude (Golden Bear winner)" not just "Radu Jude." "dock10 (UK's largest TV facility)" not just "dock10."</p>
+    </div>
+  </div>
+  <p style="font-size: 15px; color: #333; margin-top: 28px;">Does this contextualisation feel right? Any items I've over- or under-explained?</p>
+</div>
+
+</body>
+</html>

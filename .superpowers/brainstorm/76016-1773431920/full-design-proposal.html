@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Site Design Proposal — Will Rowan</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', -apple-system, sans-serif; background: #f5f5f5; color: #1a1a1a; line-height: 1.6; }
+
+  .proposal-header {
+    background: #111;
+    color: #fff;
+    padding: 48px 40px 36px;
+    text-align: center;
+  }
+  .proposal-header h1 { font-size: 28px; font-weight: 300; letter-spacing: -0.5px; }
+  .proposal-header p { color: #888; font-size: 14px; margin-top: 8px; }
+
+  .section {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px 24px;
+  }
+  .section + .section { border-top: 1px solid #e0e0e0; }
+  .section h2 {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #888;
+    margin-bottom: 20px;
+  }
+  .section h3 { font-size: 20px; font-weight: 600; margin-bottom: 12px; }
+  .section p { font-size: 15px; color: #444; margin-bottom: 12px; }
+  .section ul { font-size: 15px; color: #444; padding-left: 20px; margin-bottom: 12px; }
+  .section li { margin-bottom: 6px; }
+
+  /* Hero mockup */
+  .hero-mockup {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+    margin: 20px 0;
+  }
+  .mock-nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+  }
+  .mock-nav-bar .name { font-weight: 600; font-size: 16px; }
+  .mock-nav-bar .links { display: flex; gap: 24px; color: #666; font-size: 13px; }
+  .mock-nav-bar .links span:hover { color: #111; }
+
+  .hero-content {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 40px;
+    padding: 48px 40px;
+    align-items: start;
+  }
+  .hero-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ddd 0%, #bbb 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 12px;
+  }
+  .hero-text h1 {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 12px;
+  }
+  .hero-text .bio {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 20px;
+    max-width: 560px;
+  }
+  .hero-text .bio strong { font-weight: 600; }
+
+  .rotating-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background: #f8f8f8;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 16px;
+    overflow: hidden;
+  }
+  .rotating-bar .label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap;
+  }
+  .rotating-bar .items {
+    display: flex;
+    gap: 8px;
+    animation: scroll-highlights 20s linear infinite;
+  }
+  .rotating-bar .item {
+    white-space: nowrap;
+    padding: 4px 12px;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    font-size: 12px;
+    color: #333;
+  }
+  @keyframes scroll-highlights {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .social-links {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+    font-size: 13px;
+    color: #888;
+  }
+  .social-links span {
+    padding: 4px 0;
+    border-bottom: 1px solid transparent;
+  }
+  .social-links span:hover { color: #111; border-bottom-color: #111; }
+
+  /* Page sections mockup */
+  .page-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 20px 0;
+  }
+  .page-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 24px;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+  }
+  .page-card h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .page-card .route {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: #999;
+    background: #f5f5f5;
+    padding: 2px 8px;
+    border-radius: 4px;
+  }
+  .page-card p { font-size: 13px; color: #666; }
+  .page-card ul { font-size: 13px; color: #666; padding-left: 16px; margin-top: 8px; }
+  .page-card li { margin-bottom: 4px; }
+
+  /* Project cards mockup */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 20px 0;
+  }
+  .project-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+  }
+  .project-card .thumb {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+  }
+  .project-card .info {
+    padding: 16px;
+  }
+  .project-card .info h4 { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+  .project-card .info p { font-size: 12px; color: #888; }
+  .project-card .tags { display: flex; gap: 4px; margin-top: 8px; flex-wrap: wrap; }
+  .project-card .tag {
+    font-size: 10px;
+    padding: 2px 8px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    color: #666;
+  }
+
+  .note {
+    background: #fffbeb;
+    border-left: 3px solid #f59e0b;
+    padding: 12px 16px;
+    font-size: 13px;
+    color: #92400e;
+    border-radius: 0 8px 8px 0;
+    margin: 16px 0;
+  }
+
+  .tech-note {
+    background: #f0f7ff;
+    border-left: 3px solid #3b82f6;
+    padding: 12px 16px;
+    font-size: 13px;
+    color: #1e40af;
+    border-radius: 0 8px 8px 0;
+    margin: 16px 0;
+  }
+</style>
+</head>
+<body>
+
+<div class="proposal-header">
+  <h1>W-Rowan.github.io — Full Redesign Proposal</h1>
+  <p>Clean Academic direction · Integrated narrative · Research-forward with creative distinction</p>
+</div>
+
+<!-- SECTION 1: HERO -->
+<div class="section">
+  <h2>1. Home Page Hero</h2>
+  <p>Photo + name + punchy dual-identity paragraph + rotating achievement highlights + social links</p>
+
+  <div class="hero-mockup">
+    <div class="mock-nav-bar">
+      <div class="name">Will Rowan</div>
+      <div class="links">
+        <span>Research</span>
+        <span>Film</span>
+        <span>Projects</span>
+        <span>CV</span>
+      </div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-photo">Photo</div>
+      <div class="hero-text">
+        <h1>Will Rowan</h1>
+        <div class="bio">
+          Computer vision researcher and freelance film critic. I build intelligent systems for the human face and write about cinema that changes how we see. PhD from the University of York, published at ICLR and ECCV, and one of 200 filmmakers selected for Berlinale Talents 2025. Currently developing AI-powered virtual production tools with dock10, the UK's largest TV facility.
+        </div>
+        <div class="rotating-bar">
+          <span class="label">Recent</span>
+          <div class="items">
+            <span class="item">Best Presentation, ICVSS 2025</span>
+            <span class="item">Best Poster, ECCV 2024</span>
+            <span class="item">Berlinale Talents 2025</span>
+            <span class="item">Featured in Variety</span>
+            <span class="item">GoCritic! → Cineuropa</span>
+            <span class="item">PXLD at EFM Startups</span>
+            <span class="item">Berlinale Talents Press (1 of 8)</span>
+            <span class="item">Best Presentation, ICVSS 2025</span>
+            <span class="item">Best Poster, ECCV 2024</span>
+            <span class="item">Berlinale Talents 2025</span>
+            <span class="item">Featured in Variety</span>
+            <span class="item">GoCritic! → Cineuropa</span>
+            <span class="item">PXLD at EFM Startups</span>
+            <span class="item">Berlinale Talents Press (1 of 8)</span>
+          </div>
+        </div>
+        <div class="social-links">
+          <span>GitHub</span>
+          <span>Google Scholar</span>
+          <span>LinkedIn</span>
+          <span>Email</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 2: NAVIGATION & PAGES -->
+<div class="section">
+  <h2>2. Site Structure</h2>
+  <p>Four main pages, all accessible from a fixed top nav. No blog for now.</p>
+
+  <div class="page-grid">
+    <div class="page-card">
+      <h4>Research <span class="route">/research/</span></h4>
+      <p>Your academic profile — the core of the site.</p>
+      <ul>
+        <li>Research interests and the IFA concept</li>
+        <li>Publications with paper previews, links, BibTeX</li>
+        <li>Current work: dock10 / Innovate UK virtual production</li>
+        <li>Awards: ICVSS Best Presentation, ECCV Best Poster, ReproduceCVPR</li>
+        <li>Teaching: GTA, dissertation supervision</li>
+        <li>Service: CVMP Socials Chair, BMVA Symposium Chair</li>
+      </ul>
+    </div>
+
+    <div class="page-card">
+      <h4>Film <span class="route">/film/</span></h4>
+      <p>Criticism, festivals, filmmaking — the distinctive other half.</p>
+      <ul>
+        <li>Criticism profile: publications list (Cineuropa, Filmhounds, Taiwan News, BBC Radio York)</li>
+        <li>Key interviews: Radu Jude, Kai Ko, Johnnie To, Tommy Wiseau, Gabby Wong</li>
+        <li>Festival selections: Berlinale Talents, Locarno (Basecamp + REAL), FEFF Campus, GoCritic!</li>
+        <li>Film Fever: directorial debut (with stills from the film)</li>
+        <li>Cinema programming: York Student Cinema, 7 years, ~100 films/year</li>
+      </ul>
+    </div>
+
+    <div class="page-card">
+      <h4>Projects <span class="route">/projects/</span></h4>
+      <p>Things you've built — startups, platforms, civic tech, creative works.</p>
+      <ul>
+        <li><strong>PXLD</strong> — CEO, virtual production startup (prominent, with press links)</li>
+        <li><strong>opencall.fyi</strong> — curated opportunities for emerging artists</li>
+        <li><strong>Before Sunrise Tracker</strong> — interactive web experience</li>
+        <li><strong>Swingometer</strong> — UK election forecasting</li>
+        <li><strong>Foresight</strong> — AI research intelligence (UCL hackathon, 2nd place)</li>
+        <li><strong>SpeakEU</strong> — EU civic participation AI (Alpbach IDEAS)</li>
+        <li><strong>Club Alpbach London</strong> — Scholarships Coordinator</li>
+      </ul>
+    </div>
+
+    <div class="page-card">
+      <h4>CV <span class="route">/cv/</span></h4>
+      <p>Comprehensive, structured, printable. Updated to March 2026.</p>
+      <ul>
+        <li>Education (all three degrees with distinctions)</li>
+        <li>Experience (both RF positions, PXLD, teaching)</li>
+        <li>Publications (full list with links)</li>
+        <li>Awards & honours (all competitive selections)</li>
+        <li>Skills (technical + editorial + languages)</li>
+        <li>Community: CVMP, Club Alpbach London, SpeakEU</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 3: PROJECTS -->
+<div class="section">
+  <h2>3. Projects Page — Card Layout</h2>
+  <p>Each project gets a card with thumbnail/logo, description, tags, and link. PXLD is featured first and larger.</p>
+
+  <div class="projects-grid">
+    <div class="project-card" style="grid-column: span 2;">
+      <div class="thumb" style="background: linear-gradient(135deg, #1a1a2e, #2d2d4e); height: 160px;">
+        <span style="font-family: 'JetBrains Mono'; letter-spacing: 4px;">PXLD</span>
+      </div>
+      <div class="info">
+        <h4>PXLD — AI-Powered Virtual Production</h4>
+        <p>University of York spinout democratizing access to Hollywood-grade virtual production tools. Featured in Variety and Screen Daily. CEO & Co-founder.</p>
+        <div class="tags">
+          <span class="tag">CEO</span>
+          <span class="tag">pxld.ai</span>
+          <span class="tag">Variety</span>
+          <span class="tag">Screen Daily</span>
+          <span class="tag">Zinemaldia Startups</span>
+          <span class="tag">EFM Startups</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="thumb" style="background: linear-gradient(135deg, #f59e0b, #d97706);">BST</div>
+      <div class="info">
+        <h4>Before Sunrise Tracker</h4>
+        <p>Interactive web experience mapping the real-time journey through Vienna</p>
+        <div class="tags"><span class="tag">Web</span><span class="tag">Interactive Art</span></div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="thumb" style="background: linear-gradient(135deg, #10b981, #059669);">OC</div>
+      <div class="info">
+        <h4>opencall.fyi</h4>
+        <p>Curated opportunities for emerging artists across film, visual arts, criticism</p>
+        <div class="tags"><span class="tag">Platform</span><span class="tag">Access</span></div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="thumb" style="background: linear-gradient(135deg, #3b82f6, #1d4ed8);">SW</div>
+      <div class="info">
+        <h4>Swingometer</h4>
+        <p>UK's first fully automated election forecast platform</p>
+        <div class="tags"><span class="tag">Data</span><span class="tag">Politics</span></div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="thumb" style="background: linear-gradient(135deg, #8b5cf6, #6d28d9);">FS</div>
+      <div class="info">
+        <h4>Foresight</h4>
+        <p>AI research intelligence platform. UCL Hackathon 2nd place</p>
+        <div class="tags"><span class="tag">AI</span><span class="tag">Research</span></div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="thumb" style="background: linear-gradient(135deg, #35BBBD, #235487);">SE</div>
+      <div class="info">
+        <h4>SpeakEU</h4>
+        <p>Gen-AI civic assistant for EU democratic participation. Alpbach IDEAS 2025-26</p>
+        <div class="tags"><span class="tag">Advisor</span><span class="tag">Civic Tech</span></div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="thumb" style="background: linear-gradient(135deg, #0D3B66, #FADC5B); color: #FADC5B;">A</div>
+      <div class="info">
+        <h4>Club Alpbach London</h4>
+        <p>Scholarships Coordinator. Connecting young people to fully-funded EFA scholarships</p>
+        <div class="tags"><span class="tag">Community</span><span class="tag">Europe</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="note">Each card will use real logos/screenshots from the project folders where available (PXLD logo, Foresight logo, SpeakEU logo, Club Alpbach favicon, Before Sunrise Tracker screenshots, Swingometer OG image). Cards link to live sites.</div>
+</div>
+
+<!-- SECTION 4: TECHNICAL APPROACH -->
+<div class="section">
+  <h2>4. Technical Approach</h2>
+
+  <div class="tech-note">
+    <strong>Keep Jekyll + al-folio.</strong> The theme already handles publications with BibTeX, CV from YAML, responsive layout, dark mode, SEO, and GitHub Pages deployment. We'll heavily customise the content, styling, and structure rather than rebuild from scratch.
+  </div>
+
+  <h3>What changes:</h3>
+  <ul>
+    <li><strong>Theme colours:</strong> Clean white/light grey, subtle accent colour, modern sans-serif (Inter or similar)</li>
+    <li><strong>Home page:</strong> Complete rewrite of about.md — new hero with punchy bio + rotating highlights</li>
+    <li><strong>Navigation:</strong> Research, Film, Projects, CV (replacing the current About/CV/Publications)</li>
+    <li><strong>Research page:</strong> New page combining publications + research narrative + awards + service</li>
+    <li><strong>Film page:</strong> New page for criticism, festivals, filmmaking, programming</li>
+    <li><strong>Projects page:</strong> Card-based grid with real images/logos, links to live sites</li>
+    <li><strong>CV data:</strong> Complete rewrite of _data/cv.yml with all current information</li>
+    <li><strong>Publications:</strong> Update papers.bib with all 4 papers + correct metadata</li>
+    <li><strong>News:</strong> Fresh announcements (CVMP, PXLD, recent awards)</li>
+    <li><strong>Images:</strong> Copy in real assets — profile photo, project logos, Film Fever stills</li>
+    <li><strong>Social links:</strong> All current links (GitHub, Scholar, LinkedIn, email)</li>
+    <li><strong>Meta/SEO:</strong> Updated title, description, OG tags</li>
+  </ul>
+
+  <h3 style="margin-top: 24px;">What stays:</h3>
+  <ul>
+    <li>Jekyll build system + GitHub Pages deployment</li>
+    <li>al-folio's publication engine (jekyll-scholar + BibTeX)</li>
+    <li>Dark mode toggle</li>
+    <li>Responsive layout + Bootstrap grid</li>
+    <li>CV layout engine (YAML-driven)</li>
+  </ul>
+</div>
+
+<!-- SECTION 5: CONTENT HIGHLIGHTS -->
+<div class="section">
+  <h2>5. Content Sourced From Knowledge Base</h2>
+  <p>All content comes from your career knowledge base — no inventing. Here are the key pieces:</p>
+
+  <div class="page-grid">
+    <div class="page-card">
+      <h4>Bio / Hero Text</h4>
+      <p>Drawn from profile.md + voice-guide.md. Punchy, warm, specific. Opens with the dual identity, names the key credentials, ends on what you're doing now.</p>
+    </div>
+    <div class="page-card">
+      <h4>Rotating Highlights</h4>
+      <p>Best Presentation ICVSS · Best Poster ECCV · Berlinale Talents (1 of 200) · Talents Press (1 of 8) · Featured in Variety · PXLD at EFM Startups · GoCritic! → Cineuropa · FEFF Campus (1 of 10) · Locarno Basecamp · REAL Academy Locarno</p>
+    </div>
+    <div class="page-card">
+      <h4>Publications</h4>
+      <p>4 papers: Text2Face (ICLR 2023), OptiFaces (ICLR 2024), ECCV 2024, + deepfake detection. Full BibTeX with abstracts, links, preview images.</p>
+    </div>
+    <div class="page-card">
+      <h4>Film Criticism</h4>
+      <p>Cineuropa (3 articles), Filmhounds (Radu Jude interview + review), Taiwan News, Eastern Kicks, BBC Radio York. Links where available.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section" style="text-align: center; padding: 48px 24px;">
+  <h2>Ready?</h2>
+  <p style="font-size: 16px; color: #333;">Review each section above. Let me know what feels right, what needs adjusting, and any additions — then we'll lock the spec and start building.</p>
+</div>
+
+</body>
+</html>
