@@ -3,6 +3,7 @@ layout: about
 title: about
 permalink: /
 subtitle:
+description: "Will Rowan is a computer vision researcher and film critic. PhD University of York. Co-founder of PXLD. Berlinale Talents 2025."
 
 profile:
   align: right

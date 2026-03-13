@@ -51,6 +51,15 @@
   flex-shrink: 0;
 }
 
+@media (max-width: 576px) {
+  .achievement-ticker .ticker-label {
+    display: none;
+  }
+  .ticker-track {
+    padding-left: 12px;
+  }
+}
+
 @keyframes ticker-scroll {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }

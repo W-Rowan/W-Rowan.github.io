@@ -2,7 +2,7 @@
 layout: page
 title: research
 permalink: /research/
-description: Video foundation models, virtual production, 3D face reconstruction, and generative AI.
+description: "Research by Will Rowan: video foundation models, 3D face reconstruction, virtual production, and generative AI. Publications at ICLR and ECCV. PhD University of York."
 nav: true
 nav_order: 1
 ---

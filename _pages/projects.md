@@ -2,7 +2,7 @@
 layout: page
 title: projects
 permalink: /projects/
-description: Things I have built, from startups and platforms to creative works and civic tech.
+description: "Projects by Will Rowan: PXLD (AI filmmaking tools), opencall.fyi, Swingometer, and more. Startups, platforms, creative works, and civic tech."
 nav: true
 nav_order: 3
 horizontal: false

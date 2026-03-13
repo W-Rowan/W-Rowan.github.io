@@ -2,7 +2,7 @@
 layout: page
 title: film
 permalink: /film/
-description: Criticism, festivals, filmmaking, and cinema programming.
+description: "Film criticism and filmmaking by Will Rowan. Berlinale Talents 2025, Locarno Film Festival, Cineuropa. Interviews with Radu Jude, Johnnie To, and Tommy Wiseau."
 nav: true
 nav_order: 2
 ---
