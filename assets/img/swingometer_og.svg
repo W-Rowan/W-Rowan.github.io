@@ -1,0 +1,22 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0a0f1a"/>
+  <!-- Gauge arc -->
+  <path d="M 350 450 A 250 250 0 0 1 850 450" fill="none" stroke="#1E3A5F" stroke-width="40" stroke-linecap="round"/>
+  <path d="M 350 450 A 250 250 0 0 1 850 450" fill="none" stroke="url(#ogGrad)" stroke-width="36" stroke-linecap="round" opacity="0.9"/>
+  <!-- Needle -->
+  <g transform="rotate(20, 600, 450)">
+    <polygon points="600,200 594,440 600,455 606,440" fill="white" opacity="0.9"/>
+    <circle cx="600" cy="450" r="14" fill="white"/>
+    <circle cx="600" cy="450" r="7" fill="#0a0f1a"/>
+  </g>
+  <!-- Text -->
+  <text x="600" y="540" text-anchor="middle" fill="white" font-family="Inter, system-ui, sans-serif" font-size="48" font-weight="800">Swingometer</text>
+  <text x="600" y="580" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-family="Inter, system-ui, sans-serif" font-size="22">UK Election Forecast</text>
+  <defs>
+    <linearGradient id="ogGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#DC241F"/>
+      <stop offset="50%" stop-color="#0087DC"/>
+      <stop offset="100%" stop-color="#12B6CF"/>
+    </linearGradient>
+  </defs>
+</svg>
