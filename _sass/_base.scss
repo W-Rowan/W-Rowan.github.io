@@ -52,6 +52,15 @@ table.table a {
   }
 }
 
+// Always underline inline prose links (paragraphs and lists) so hyperlinks
+// are clearly distinguishable from text. Colour inherits the blue accent.
+.post p a,
+.post li a {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  text-decoration-thickness: 1px;
+}
+
 .table-dark {
   background-color: transparent;
   &.table-bordered{

@@ -9,13 +9,14 @@ nav_order: 2
 
 ## Festival Selections & Programmes
 
-- **Berlinale Talents 2025**, selected as 1 of 200 emerging filmmakers from thousands of applicants worldwide, at the Berlin International Film Festival
-- **Berlinale Talents Press 2025**, simultaneously selected as 1 of 8 film critics worldwide for the dedicated press programme
+- **Berlinale Talents 2025**, selected for the Berlin International Film Festival's flagship talent programme: 1 of 200 emerging filmmakers chosen from thousands worldwide, and simultaneously 1 of 8 critics selected for the dedicated Talents Press strand
 - **REAL Academy, Locarno Film Festival 2025**, selected for the festival's filmmaker lab; directed *Film Fever* (see below)
 - **GoCritic! 2024–2025**, selected for the European film criticism programme at Anifilm (Liberec, Czech Republic); wrote three articles for [Cineuropa](https://www.cineuropa.org), Europe's leading film industry publication
 - **Far East Film Festival Campus, Udine 2023**, selected as 1 of 10 young critics from Europe and Asia
 - **Locarno Basecamp 2023**, selected as 1 of 200 for the Locarno Film Festival's artistic residency
 - **European Forum Alpbach 2025**, scholarship recipient
+- **Zinemaldia Startup Challenge 2025**, selected with PXLD for the San Sebastián International Film Festival's startup competition; featured in Variety
+- **European Film Market Startups 2025**, selected with PXLD for the startup programme at the European Film Market, the Berlinale's industry market; featured in Screen Daily
 
 ## Published Criticism
 
